@@ -1,0 +1,300 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+
+    background:
+        radial-gradient(circle at bottom, #fff, transparent 80%),
+        linear-gradient(to top, dodgerblue 0%, transparent 70%),
+        linear-gradient(to bottom, transparent, rgba(#fff, 0.4) 70%),
+        #1e90ff;
+    animation: bg 25s infinite;
+}
+
+@keyframes bg {
+
+    0%,
+    100% {
+        background-color: #1e90ff;
+    }
+
+    25% {
+        background-color: #39d24a;
+    }
+
+    50% {
+        background-color: #ffe244;
+    }
+
+    75% {
+        background-color: #ff36a3;
+    }
+}
+
+main {
+    width: 30vm;
+    text-align: center;
+    background-color: var(--background);
+    border: solid var(--dark);
+}
+
+:root {
+    --dark: black;
+    --background: white;
+}
+
+h2 {
+    font-size: 25px;
+    margin: 25px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 13px;
+    margin: 10px;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    align-items: center;
+    appearance: none;
+    background-color: #ff9d00;
+    background-image: linear-gradient(1deg, #FF370C, #FE8369 99%);
+    background-size: calc(100% + 20px) calc(100% + 20px);
+    border-radius: 100px;
+    border-width: 0px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: CircularStd, sans-serif;
+    font-size: 1rem;
+    height: auto;
+    justify-content: center;
+    line-height: 1.5;
+    padding: 6px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .2s, background-position .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+    margin: 5px;
+}
+
+button:active,
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    background-position: -20px -20px;
+}
+
+button:focus:not(:active) {
+    box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+}
+
+#gameArea {
+    height: 50vh;
+    width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#newGameButton button {
+    margin: 35px;
+
+}
+
+#closeGameButton button {
+    margin: 35px;
+
+}
+
+input {
+    border: 2px solid grey;
+    margin: 20px 0px;
+    padding: 5px;
+    width: 170px;
+    text-align: center;
+}
+
+.stats {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#info span {
+    font-size: 20px;
+    color: red;
+    margin-right: 25px;
+}
+
+/*--------------------------------------------------------------------------*/
+
+@media screen and (max-width:600px) {
+    body {
+        width: 75vw;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    
+    main {
+        width: 30vm;
+        text-align: center;
+        background-color: var(--background);
+        border: solid var(--dark);
+    }
+    
+    :root {
+        --dark: black;
+        --background: white;
+    }
+    
+    h2 {
+        font-size: 25px;
+        margin: 25px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+    
+    p {
+        font-size: 13px;
+        margin: 10px;
+    }
+    
+    .button-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    button {
+        align-items: center;
+        appearance: none;
+        background-color: #ff9d00;
+        background-image: linear-gradient(1deg, #FF370C, #FE8369 99%);
+        background-size: calc(100% + 20px) calc(100% + 20px);
+        border-radius: 50px;
+        border-width: 0px;
+        box-shadow: none;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: CircularStd, sans-serif;
+        font-size: .7rem;
+        height: auto;
+        justify-content: center;
+        line-height: 1.5;
+        padding: 3px 10px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transition: background-color .2s, background-position .2s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: top;
+        white-space: nowrap;
+        margin: 2.5px;
+    }
+    
+    button:active,
+    button:focus {
+        outline: none;
+    }
+    
+    button:hover {
+        background-position: -20px -20px;
+    }
+    
+    button:focus:not(:active) {
+        box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+    }
+    
+    #gameArea {
+        height: 40vh;
+        width: 35vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #newGameButton button {
+        margin: 5px;
+        width: 85px; height: 25px;
+        
+    }
+    
+    #closeGameButton button {
+        margin: 5px;
+        width: 85px; height: 25px;
+    
+    }
+    
+    input {
+        font-size: .7rem;
+        border: 2px solid grey;
+        margin: 20px 0px;
+        padding: 5px;
+        width: 70px;
+        text-align: center;
+    }
+    
+    .stats {
+        text-align: left;
+        margin-bottom: 5px;
+    }
+    
+    #info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    #info span {
+        font-size: 20px;
+        color: red;
+        margin-right: 25px;
+    }
+}

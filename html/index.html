@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Game</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body onload="init()">
+    <main>
+        <div id="welcomeScreen">
+            <h2>Guess the Random Number between 1 to 100</h2>
+            <img class="image" src="../image/images.jpg" alt="Image">
+            <section class="eventSection">
+                <p>Select the Difficulty</p>
+                <div class="button-wrapper">
+                    <button onclick="essayMode()">Essay 10 Attempts</button>
+                    <button onclick="hardMode()">Hard 5 Attempts</button>
+                </div>
+            </section>
+        </div>
+        <div id="gameArea">
+            <div id="newGameButton">
+                <button onclick="newGameBegin()">New Game</button>
+            </div>
+            <section>
+                <h3 id="textOutput">Your Guess</h3>
+                <input type="number" id="inputBox" min="1" max="100" placeholder="Enter your Guess"
+                    onchange="compareGuess()">
+            </section>
+            <section class="stats">
+                <div id="info">
+                    <p>Number of pervious Attempts</p>
+                    <span id="attempts">0</span>
+                </div>
+                <div id="info">
+                    <p>Number of pervious Guess</p>
+                    <span id="Guess">0</span>
+                </div>
+            </section>
+            <div id="closeGameButton">
+                <button onclick="closeGame()">Close Game</button>
+            </div>
+        </div>
+
+    </main>
+    <script src="../javascript/index.js"></script>
+</body>
+
+</html>
